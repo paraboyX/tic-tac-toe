@@ -23,7 +23,7 @@ const Box = () => {
       }
     }
 
-    return null;
+    return false;
   };
 
   function handleClick(index) {
@@ -37,10 +37,19 @@ const Box = () => {
 
   const winner = calculateWinner();
 
-  return (
+  const playAgain = () => {
+    const newVal = Array(9).fill(null);
+    setVal(newVal); 
+  };
+
+  return winner ? (
     <>
-      <h1>Player {turn ? 'X' : '0'} turn!</h1> 
-      <h1>Player {winner} wins!</h1>
+      <h1>Player is {winner}</h1>
+      <button onClick={() => playAgain()}>Play Again</button>
+    </>
+  ) : (
+    <>
+      <h1>Player {turn ? "X" : "0"} turn!</h1>
       <>
         <div className="">
           <div className="flex justify-center text-center">
