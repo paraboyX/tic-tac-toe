@@ -39,23 +39,27 @@ const Box = () => {
 
   return (
     <>
-      <div className="">
-        <div className="flex justify-center text-center">
-          <Pieces onClick={() => handleClick(0)} nums={val[0]} />
-          <Pieces onClick={() => handleClick(1)} nums={val[1]} />
-          <Pieces onClick={() => handleClick(2)} nums={val[2]} />
+      <h1>Player {turn ? 'X' : '0'} turn!</h1> 
+      <h1>Player {winner} wins!</h1>
+      <>
+        <div className="">
+          <div className="flex justify-center text-center">
+            <Pieces onClick={() => handleClick(0)} nums={val[0]} />
+            <Pieces onClick={() => handleClick(1)} nums={val[1]} />
+            <Pieces onClick={() => handleClick(2)} nums={val[2]} />
+          </div>
+          <div className="flex justify-center text-center">
+            <Pieces onClick={() => handleClick(3)} nums={val[3]} />
+            <Pieces onClick={() => handleClick(4)} nums={val[4]} />
+            <Pieces onClick={() => handleClick(5)} nums={val[5]} />
+          </div>
+          <div className="flex justify-center text-center">
+            <Pieces onClick={() => handleClick(6)} nums={val[6]} />
+            <Pieces onClick={() => handleClick(7)} nums={val[7]} />
+            <Pieces onClick={() => handleClick(8)} nums={val[8]} />
+          </div>
         </div>
-        <div className="flex justify-center text-center">
-          <Pieces onClick={() => handleClick(3)} nums={val[3]} />
-          <Pieces onClick={() => handleClick(4)} nums={val[4]} />
-          <Pieces onClick={() => handleClick(5)} nums={val[5]} />
-        </div>
-        <div className="flex justify-center text-center">
-          <Pieces onClick={() => handleClick(6)} nums={val[6]} />
-          <Pieces onClick={() => handleClick(7)} nums={val[7]} />
-          <Pieces onClick={() => handleClick(8)} nums={val[8]} />
-        </div>
-      </div>
+      </>
     </>
   );
 };
