@@ -6,14 +6,14 @@ const Pieces = (props) => {
       onClick={props.onClick}
       className="flex justify-center items-center border border-sky-500 h-20 w-20"
     >
-      {props.value}
+      {props.nums}
     </div>
   );
 };
 
 Pieces.propTypes = {
   onClick: PropTypes.func,
-  value: PropTypes.any,
+  nums: PropTypes.any,
 };
 
 export default Pieces;
