@@ -1,19 +1,19 @@
 import PropTypes from "prop-types";
 
-const Pieces = ({ onButtonClick, nums }) => {
+const Pieces = (props) => {
   return (
     <div
-      onClick={onButtonClick}
+      onClick={props.onClick}
       className="flex justify-center items-center border border-sky-500 h-20 w-20"
     >
-      {nums}
+      {props.value}
     </div>
   );
 };
 
 Pieces.propTypes = {
-  nums: PropTypes.bool,
-  onButtonClick: PropTypes.func.isRequired, // Use the appropriate prop type
+  onClick: PropTypes.func,
+  value: PropTypes.any,
 };
 
 export default Pieces;
