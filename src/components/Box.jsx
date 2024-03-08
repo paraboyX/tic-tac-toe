@@ -7,9 +7,11 @@ const Box = () => {
 
   function handleClick(index) {
     const newVal = [...val];
-    newVal[index] = turn ? 'X' : '0';
-    setVal(newVal);
-    setTurn(!turn);
+    if (newVal[index] === null) {
+      newVal[index] = turn ? "X" : "0";
+      setVal(newVal);
+      setTurn(!turn);
+    } else alert("This spot is already occupied");
   }
 
   return (
