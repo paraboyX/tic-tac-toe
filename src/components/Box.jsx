@@ -44,12 +44,13 @@ const Box = () => {
 
   return winner ? (
     <>
-      <h1>Player is {winner}</h1>
+      <h1> {winner} wins</h1>
       <button onClick={() => playAgain()}>Play Again</button>
     </>
   ) : (
     <>
       <h1>Player {turn ? "X" : "0"} turn!</h1>
+      <button onClick={() => playAgain()}>Play Again</button>
       <>
         <div className="">
           <div className="flex justify-center text-center">
